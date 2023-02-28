@@ -10,4 +10,6 @@
  * 
  * // что в fruits?
  * alert( fruits.length ); // ?
+ * 
+ * Ответ: 4
  */

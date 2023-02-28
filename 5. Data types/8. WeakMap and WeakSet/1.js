@@ -18,3 +18,14 @@
  * P.S. Когда сообщение удаляется из массива messages, оно должно также исчезать из структуры данных.
  * P.P.S. Нам не следует модифицировать сами объекты сообщений, добавлять туда свойства. Если сообщения принадлежат какому-то другому коду, то это может привести к плохим последствиям.
  */
+let messages = [
+  {text: "Hello", from: "John"},
+  {text: "How goes?", from: "John"},
+  {text: "See you soon", from: "Alice"}
+];
+let readMessages = new WeakSet();
+readMessages.add(messages[0]);
+readMessages.add(messages[1]);
+readMessages.add(messages[0]);
+alert("Read message 0: " + readMessages.has(messages[0]));
+messages.shift();

@@ -18,3 +18,13 @@
  * getMaxSubSum([-1, -2, -3]) = 0
  * Попробуйте придумать быстрое решение: O(n2), а лучше за О(n) операций.
  */
+const getMaxSubSum = (arr) => {
+  let maxSum = 0;
+  let partialSum = 0;
+  for (let item of arr) {
+    partialSum += item;
+    maxSum = Math.max(maxSum, partialSum);
+    if (partialSum < 0) partialSum = 0;
+  }
+  return maxSum;
+}

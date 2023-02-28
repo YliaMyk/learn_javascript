@@ -9,3 +9,8 @@
  * alert( random(1, 5) ); // 3.7894332423
  * alert( random(1, 5) ); // 4.3435234525
  */
+const random = (min, max) => {
+  return min + Math.random() * (max - min);
+}
+
+alert(random(1, 5));

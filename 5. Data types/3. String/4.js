@@ -9,3 +9,6 @@
  * Например:
  * alert( extractCurrencyValue('$120') === 120 ); // true
  */
+const extractCurrencyValue = (str) => {
+  return +str.slice(1);
+}

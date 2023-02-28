@@ -12,3 +12,9 @@
  * P.S. Подсказка: используйте split, чтобы разбить строку на массив символов,
  * потом переделайте всё как нужно и методом join соедините обратно.
  */
+const camelize = (str) => {
+  return str
+    .split('-')
+    .map((word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1))
+    .join('');
+}
